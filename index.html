@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Department of Foreign Affairs - Philippine Passport
+            Services</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Public+Sans:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <!-- HEADER & NAVIGATION -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="resources/dfa-logo.png" alt="logo"
+                        style="width: auto; height: 50px;">
+                    <span>DFA Philippines</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="accessibility-menu">
+                    <button class="accessibility-btn" id="accessibilityBtn"
+                        onclick="toggleAccessibilityMenu()">
+                        <i class="fas fa-universal-access"></i>
+                    </button>
+                    <div class="accessibility-dropdown"
+                        id="accessibilityDropdown">
+                        <div id="darkmode" class="dropdown-header">Accessibility</div>
+                        <button class="dropdown-item"
+                            onclick="toggleDarkMode()">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark Mode</span>
+                        </button>
+                        <button class="dropdown-item"
+                            onclick="scrollToNextSection()">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>Next Section</span>
+                        </button>
+                        <button class="dropdown-item"
+                            onclick="scrollToBottom()">
+                            <i class="fas fa-angles-down"></i>
+                            <span>Bottom</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="hamburger" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Philippine Passport Services</h1>
+                <p>Fast, secure, and convenient passport application and renewal
+                    services for all Filipinos</p>
+                <div class="cta-buttons">
+                    
+                    <button class="btn btn-secondary" type="button"
+                        onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-arrow-right"></i> Learn More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services" id="services">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive passport and consular services designed for
+                    your convenience</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i
+                            class="fas fa-passport"></i></div>
+                    <h3>Passport Services</h3>
+                    <p>Apply for a new Philippine passport or renew your
+                        existing one with our streamlined process.</p>
+                    <ul class="service-list">
+                        <li>New Passport Application</li>
+                        <li>Passport Renewal</li>
+                        <li>Replacement (Lost/Damaged)</li>
+                        <li>Name Change Processing</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Processing Times</h3>
+                    <p>Fast and efficient passport processing with flexible
+                        options to suit your needs.</p>
+                    <ul class="service-list">
+                        <li>Regular: 10 working days (NCR)</li>
+                        <li>Expedited: 5 working days (NCR)</li>
+                        <li>Outside NCR: 12-7 working days</li>
+                        <li>Special Lane: Priority access</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i
+                            class="fas fa-calendar-check"></i></div>
+                    <h3>Passport Validity</h3>
+                    <p>Know your passport validity period under Republic Act No.
+                        10928 (2017).</p>
+                    <ul class="service-list">
+                        <li>Adults (18+): 10 years valid</li>
+                        <li>Minors (under 18): 5 years valid</li>
+                        <li>Enhanced Security Features</li>
+                        <li>International Standard Compliance</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i
+                            class="fas fa-wheelchair"></i></div>
+                    <h3>Special Lane Services</h3>
+                    <p>Priority services for eligible applicants including
+                        seniors, PWDs, and OFWs.</p>
+                    <ul class="service-list">
+                        <li>Senior Citizens (60+)</li>
+                        <li>Persons with Disabilities</li>
+                        <li>Pregnant Women</li>
+                        <li>Overseas Filipino Workers</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i
+                            class="fas fa-calendar-alt"></i></div>
+                    <h3>Appointment Booking</h3>
+                    <p>Schedule your passport appointment online through our
+                        convenient booking system.</p>
+                    <ul class="service-list">
+                        <li>Online Appointment System</li>
+                        <li>Free Appointment Slots</li>
+                        <li>Multiple Office Locations</li>
+                        <li>Flexible Scheduling</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Consular Services</h3>
+                    <p>Access DFA services at Philippine embassies and
+                        consulates worldwide.</p>
+                    <ul class="service-list">
+                        <li>Overseas Passport Application</li>
+                        <li>Consular Assistance</li>
+                        <li>Document Authentication</li>
+                        <li>Emergency Services</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS SECTION -->
+        <section class="news" id="news">
+            <div class="section-header">
+                <h2>Latest News & Updates</h2>
+                <p>Stay informed with the latest announcements and updates from
+                    DFA</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-category">
+                    <h3><i class="fas fa-newspaper"></i> DFA Releases</h3>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 24, 2025</div>
+                        <p class="news-title">FSI Hosts Luncheon at the 7th
+                            Katipunan Conference</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 24, 2025</div>
+                        <p class="news-title">Malaysian Ambassador Graces FSI's
+                            16th ALS</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 24, 2025</div>
+                        <p class="news-title">Vietnamese Ambassador Speaks in
+                            FSI Lecture Series</p>
+                    </div>
+                </div>
+                <div class="news-category">
+                    <h3><i class="fas fa-globe"></i> News from FSP</h3>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 22, 2025</div>
+                        <p class="news-title">PH Embassy Fuses Filipino Dishes
+                            into Danish Smørrebrød</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 22, 2025</div>
+                        <p class="news-title">Philippine Mission to WTO Holds
+                            Training-Workshop in Cebu</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 22, 2025</div>
+                        <p class="news-title">PH, ASEAN Embassies in Kuwait
+                            Launch Tourism Instagram</p>
+                    </div>
+                </div>
+                <div class="news-category">
+                    <h3><i class="fas fa-bullhorn"></i> Statements &
+                        Advisories</h3>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 23, 2025</div>
+                        <p class="news-title">Suspension of Operations at DFA
+                            Consular Office Puerto Princesa</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 21, 2025</div>
+                        <p class="news-title">XIXTH Ministerial Meeting of the
+                            Non-Aligned Movement</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date"><i class="fas fa-calendar"></i>
+                            October 10, 2025</div>
+                        <p class="news-title">DFA CO Tacloban Suspends
+                            Operations due to Tsunami Threat</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+            <div class="section-header">
+                <h2>About DFA</h2>
+                <p>Learn more about the Department of Foreign Affairs and our
+                    mission</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Mission, Vision and Core Values</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p><strong>Mission:</strong> To advance the national
+                                interest through the conduct of foreign policy
+                                and the promotion of economic, political, and
+                                cultural relations with other countries.</p>
+                            <p><strong>Vision:</strong> A world-class foreign
+                                service that serves the Filipino people with
+                                excellence and integrity.</p>
+                            <p><strong>Core Values:</strong> Integrity,
+                                Excellence, Patriotism, and Service to the
+                                Filipino people.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-history"></i>
+                        <span>Our History</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>The Department of Foreign Affairs was established
+                                to manage the Philippines' international
+                                relations and represent Filipino interests
+                                abroad. With a rich history spanning decades,
+                                the DFA has evolved to meet the changing needs
+                                of the Filipino people in an increasingly
+                                interconnected world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-globe"></i>
+                        <span>Philippine Foreign Policy</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Philippine foreign policy is guided by the
+                                principles of national sovereignty, territorial
+                                integrity, and the promotion of peace and
+                                stability in the region. The DFA works to
+                                strengthen diplomatic ties and foster
+                                cooperation with nations worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-star"></i>
+                        <span>Quality Policy</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>The DFA is committed to providing high-quality
+                                services to all citizens. Our quality policy
+                                emphasizes efficiency, transparency, and
+                                customer satisfaction in all our operations and
+                                services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-file-contract"></i>
+                        <span>DFA Citizen's Charter</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                            <p>Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat
+                                cupidatat non proident, sunt in culpa qui
+                                officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-building"></i>
+                        <span>Philippine Embassies and Consulates</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                            <p>The Philippines maintains diplomatic missions
+                                across the globe to serve Filipino citizens and
+                                promote bilateral relations. Our embassies and
+                                consulates provide essential services including
+                                passport processing, visa applications, and
+                                consular assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-map-location-dot"></i>
+                        <span>Philippine Missions</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                            <p>Philippine missions abroad represent the
+                                interests of the Philippines and its citizens.
+                                These missions work to strengthen diplomatic
+                                ties, promote trade and investment, and provide
+                                support to overseas Filipinos in their
+                                respective jurisdictions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" type="button"
+                        onclick="toggleAccordion(this)">
+                        <i class="fas fa-handshake"></i>
+                        <span>Philippine Consulates with Honorary
+                            Officials</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</p>
+                            <p>Honorary consular officials serve as
+                                representatives of the Philippines in areas
+                                where full diplomatic missions are not
+                                established. They provide limited consular
+                                services and assist in promoting Philippine
+                                interests and supporting Filipino communities in
+                                their regions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING BUTTONS -->
+        <button class="floating-chatbot" type="button" onclick="openChatModal()"
+            title="Chat with AI Assistant">
+            <i class="fas fa-comments"></i>
+        </button>
+        <button class="scroll-top-btn" id="scrollTopBtn" type="button"
+            onclick="scrollToTop()" title="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- CHAT MODAL -->
+        <div class="chat-modal" id="chatModal">
+            <div class="chat-header">
+                <h5>AI Assistant</h5>
+                <button class="chat-close" type="button"
+                    onclick="closeChatModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-bubble">👋 Hello! How can I assist you
+                        today?</div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" class="chat-input" id="chatInput"
+                    placeholder="Type your message..."
+                    onkeypress="handleKeyPress(event)">
+                <button class="chat-send" type="button" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    
+
+
+        <!-- FOOTER -->
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Passport Application</a></li>
+                        <li><a href="#">Appointment Booking</a></li>
+                        <li><a href="#">Consular Services</a></li>
+                        <li><a href="#">Special Lane</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li><strong>Passport Appointment Concerns:</strong></li>
+                        <li><a href="tel:+6382343488">+63 (8) 234-3488</a></li>
+                        <li style="margin-top: 0.75rem;"><strong>Passport,
+                                Authentication & Consular:</strong></li>
+                        <li><a href="tel:+6386519400">+63 (8) 651-9400</a></li>
+                        <li style="margin-top: 0.75rem;"><strong>Assistance to
+                                Nationals:</strong></li>
+                        <li><a href="tel:+6328344000">+63 (2) 8 834-4000 ext.
+                                4031</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Office Locations</h4>
+                    <ul>
+                        <li><strong>Consular Affairs Office:</strong></li>
+                        <li>Bradco Avenue, corner Macapagal Boulevard</li>
+                        <li>ASEANA Business Park</li>
+                        <li>Paranaque City, Metro Manila</li>
+                        <li style="margin-top: 0.75rem;"><strong>DFA Home
+                                Office:</strong></li>
+                        <li>Double Dragon Tower</li>
+                        <li>DD Meridian Avenue, EDSA Extension</li>
+                        <li>Pasay City, Metro Manila</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Department of Foreign Affairs. All rights
+                    reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js" defer></script>
+    </body>
+</html>
