@@ -22,16 +22,17 @@
 }
 
 html.dark-mode {
-  --primary: #1e90ff;
-  --primary-dark: #1873cc;
-  --secondary: #64b5f6;
-  --accent: #90caf9;
-  --text: #e0e0e0;
-  --text-light: #b0b0b0;
-  --bg-light: #1a1a1a;
-  --bg-lighter: #242424;
-  --white: #2d2d2d;
-  --border: #404040;
+  /* Improved dark mode with warmer, more pleasant colors and better contrast */
+  --primary: #5eb3ff;
+  --primary-dark: #4a9ee6;
+  --secondary: #7ec8ff;
+  --accent: #b8d4ff;
+  --text: #e8eef5;
+  --text-light: #c5cfe0;
+  --bg-light: #1a1f2e;
+  --bg-lighter: #242d3d;
+  --white: #2f3a4d;
+  --border: #3d4a5c;
 }
 
 /* ============================================
@@ -840,6 +841,21 @@ footer {
   text-align: center;
 }
 
+/* Add dark mode styling for better footer text visibility */
+html.dark-mode footer {
+  background: var(--white);
+  color: var(--text);
+}
+
+html.dark-mode .footer-section h4 {
+  color: var(--text);
+}
+
+html.dark-mode .footer-bottom {
+  border-top: 1px solid rgba(232, 238, 245, 0.2);
+  color: var(--text-light);
+}
+
 .footer-content {
   max-width: 1400px;
   margin: 0 auto;
@@ -852,7 +868,7 @@ footer {
 
 .footer-section h4 {
   margin-bottom: 1rem;
-  color: var(--accent);
+  color: var(--white);
 }
 
 .footer-section ul {
@@ -864,18 +880,30 @@ footer {
 }
 
 .footer-section a {
-  color: rgba(255, 255, 255, 0.8);
+  /* Updated footer link colors to use CSS variables for light and dark mode support */
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: var(--transition);
 }
 
 .footer-section a:hover {
   color: var(--white);
+  text-decoration: underline;
+}
+
+html.dark-mode .footer-section a:hover {
+  color: var(--primary);
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
+
 
 /* ============================================
            RESPONSIVE DESIGN
@@ -1121,16 +1149,18 @@ footer {
     gap: 1.5rem;
   }
 }
+
 /* Links Section */
 .links-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
+  background: var(--bg-light);
 }
 
 .section-title {
   font-size: 2rem;
-  color: #003d82;
+  color: var(--accent);
   text-align: center;
   margin-bottom: 3rem;
   font-weight: 700;
@@ -1144,8 +1174,8 @@ footer {
 }
 
 .link-card {
-  background: white;
-  border: 1px solid #e0e0e0;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
@@ -1158,29 +1188,29 @@ footer {
 }
 
 .link-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 61, 130, 0.15);
-  border-color: #003d82;
+  box-shadow: 0 8px 24px rgba(94, 179, 255, 0.2);
+  border-color: var(--primary);
   transform: translateY(-4px);
 }
 
 .link-icon {
   font-size: 2.5rem;
-  color: #003d82;
+  color: var(--primary);
 }
 
 .link-card h3 {
   font-size: 1.1rem;
-  color: #003d82;
+  color: var(--accent);
   font-weight: 600;
 }
 
 .link-card p {
-  color: #666;
+  color: var(--text-light);
   font-size: 0.95rem;
 }
 
 .link-arrow {
-  color: #003d82;
+  color: var(--primary);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -1195,7 +1225,7 @@ footer {
 
 /* Certifications Section */
 .certifications-section {
-  background: #f5f7fa;
+  background: var(--bg-lighter);
   padding: 3rem 2rem;
   margin-top: 2rem;
 }
@@ -1213,8 +1243,8 @@ footer {
 }
 
 .cert-card {
-  background: white;
-  border: 1px solid #e0e0e0;
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -1222,27 +1252,28 @@ footer {
 }
 
 .cert-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 61, 130, 0.1);
-  border-color: #003d82;
+  box-shadow: 0 8px 24px rgba(94, 179, 255, 0.2);
+  border-color: var(--primary);
 }
 
 .cert-icon {
   font-size: 3rem;
-  color: #003d82;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 
 .cert-card h3 {
   font-size: 1.1rem;
-  color: #003d82;
+  color: var(--accent);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .cert-card p {
-  color: #666;
+  color: var(--text-light);
   font-size: 0.9rem;
 }
+
 /* ============================================
            LEADERSHIP SECTION
            ============================================ */
