@@ -1243,3 +1243,156 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+/* ============================================
+           LEADERSHIP SECTION
+           ============================================ */
+.leadership {
+  padding: 6rem 2rem;
+  background: var(--bg-light);
+}
+
+.leadership .section-header {
+  margin-bottom: 4rem;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.leadership-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border-top: 5px solid var(--primary);
+}
+
+.leadership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.leadership-header {
+  background: var(--accent);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+.leadership-content {
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leadership-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+}
+
+.leadership-card h3 {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.leadership-title {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.leadership-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.leadership-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  color: var(--primary);
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.leadership-link:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.leadership-link i {
+  font-size: 1.1rem;
+}
+
+/* Responsive Design for Leadership Section */
+@media (max-width: 768px) {
+  .leadership {
+    padding: 4rem 1.5rem;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .leadership-links {
+    gap: 1rem;
+  }
+
+  .leadership-link {
+    flex: 1;
+    min-width: 200px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .leadership {
+    padding: 3rem 1rem;
+  }
+
+  .leadership-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .leadership-title {
+    font-size: 0.85rem;
+  }
+
+  .leadership-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .leadership-link {
+    width: 100%;
+  }
+}
